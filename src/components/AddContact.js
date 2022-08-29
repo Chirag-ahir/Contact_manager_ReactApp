@@ -3,7 +3,7 @@ import React from "react";
 class AddContact extends React.Component {
   state = {
     name: "",
-    email: "",
+    contact: "",
   };
 
   add = (e) => {
@@ -13,7 +13,7 @@ class AddContact extends React.Component {
       return;
     }
     this.props.addContactHandler(this.state);
-    this.setState({ name: "", email: "" });
+    this.setState({ name: "", contact: "" });
   };
   render() {
     return (
@@ -34,9 +34,9 @@ class AddContact extends React.Component {
             <label>Email</label>
             <input
               type="text"
-              name="email"
-              placeholder="Email"
-              value={this.state.email}
+              name="contact"
+              placeholder="contact no"
+              value={this.state.contact}
               onChange={(e) => this.setState({ email: e.target.value })}
             />
           </div>
